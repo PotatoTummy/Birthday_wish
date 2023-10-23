@@ -2,9 +2,130 @@
 <html>
 <head>
     <title>Happy Birthday Dad</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-image: url('background.jpg'); /* Add the path to your background image */
+            background-size: cover; /* Cover the entire viewport */
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            background: none; /* Remove background color */
+            border: none; /* Remove border */
+            padding: 0; /* Remove padding */
+        }
+
+        .centered-text {
+            text-align: center;
+        }
+
+        .message {
+            font-size: 20px;
+            color: #fff; /* White text for good contrast */
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        #happy-birthday {
+            font-size: 36px;
+            color: #ff6b6b; /* A pinkish-red color for contrast */
+            font-weight: bold;
+            font-family: 'Georgia', serif;
+        }
+
+        #message {
+            font-size: 24px;
+            color: #fff; /* A blue color for contrast */
+            font-family: 'Verdana', sans-serif;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .father-image {
+            width: 200px;
+            animation: slideUp 2s ease forwards, fadeIn 2s ease forwards;
+            opacity: 0;
+            margin: 10px; /* Add margin to separate images */
+        }
+
+        @keyframes slideUp {
+            0% {
+                transform: translateY(100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .slide-in-left {
+            animation: slideLeft 2s ease forwards;
+        }
+
+        .slide-in-bottom {
+            animation: slideBottom 2s ease forwards;
+        }
+
+        @keyframes slideLeft {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideBottom {
+            0% {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Happy Birthday, Dad!</h1>
-    <p>Wishing you a fantastic day filled with love and happiness!</p>
+
+
+    <div class="container">
+        <div class="centered-text">
+            <p id="happy-birthday" class="slide-in-left">Happy Birthday Papa</p>
+        </div>
+        <div class="centered-text">
+            <p id="message" class="message slide-in-bottom">Wishing you a fantastic day filled with love and happiness!</p>
+        </div>
+        <div class="centered-text">
+            <div class="image-container">
+                <img class="father-image" src="image1.jpg" alt="Your Father">
+                <img class="father-image" src="image2.jpg" alt="Your Father">
+                <img class="father-image" src="image3.jpg" alt="Your Father">
+            </div>
+        </div>
+    </div>
+	<a href="new_page.html">
+        <button id="openNewPageButton">Click for Video</button>
+    </a>
 </body>
 </html>
